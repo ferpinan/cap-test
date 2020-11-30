@@ -1,19 +1,23 @@
-import model.Employee;
+package eus.ferpinan.captest;
+
+import eus.ferpinan.captest.model.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MaximumUsingStreamMain {
-    public static void main(String args[]) {
+public class PrintNamesUsingStreamMain {
+    public static void main(String[] args) {
         List<Employee> employeeList = createEmployeeList();
+
         String namesAsString = employeeList.stream()
                 .map(Employee::getName)
                 .collect(Collectors.joining(", "));
+
         System.out.println(namesAsString);
     }
 
-    public static List<Employee> createEmployeeList() {
+    private static List<Employee> createEmployeeList() {
         List<Employee> employeeList = new ArrayList<>();
         Employee e1 = new Employee("John", 21);
         Employee e2 = new Employee("Martin", 19);

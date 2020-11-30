@@ -1,7 +1,7 @@
 ## 1
 __C__
 
-Compiler Error: `show` method is final in Base class, it can not be overriden
+Compiler Error: `show` method is final in Base class, it can not be overridden
 
 ## 2
 
@@ -51,15 +51,24 @@ __A__
     
 ## 9
 
-Answered at `MaximumUsingStreamMain.java` file.
+Answered at `eus.ferpinan.captest.PrintNamesUsingStreamMain.java` file.
 
 # 10
 
-Answered at `FindBiggerToTheRight.java` file.
+Answered at `eus.ferpinan.captest.FindBiggerToTheRightMain.java` and it's dependencies. Some unit test have been done to test these implementations. They can be run with the next commmand (only applies if we have `maven`):
+
+    mvn clean test
+
+
+> Note: the first implementation complexity did not convince me so I made a new Implementation. Therefore, this answer has two parts.
+
+### 10 (Part 1)
+
+This implementation was done at `FindBiggerNumberToTheRightServiceStreamsImpl`.
 
 __A__
 
-List has bean used so we could use streams to find the first bigger element in a sublist.
+List has been used so we could use streams to find the first bigger element in a sublist.
 Set was discarded because it can not contain duplcated elements.
 
 __B__ 
@@ -74,4 +83,17 @@ To solve this complexity, we need to use Sum for mathematics formula by see this
 Complexity will be
 
 __`O((n^2-n)/2)`__
+
+### 10 (Part 2)
+
+This implementation was done at `FindBiggerNumberToTheRightServiceStackImpl`.
+
+__A__
+
+The previous implementation was not very efficient so I found in the internet how to make it better. The best aproach was using a `Stack` were indices were saved in case next number was smaller until the algorithm finds the next bigger one.
+
+__B__ 
+
+The complexity in the best case is O(n) (if the array is ordered ascendant).
+The complexity in the worst case is O(2*n) (if the array is ordered descendant).
 
